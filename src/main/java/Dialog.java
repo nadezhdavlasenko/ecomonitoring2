@@ -2,12 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Subscribers extends JDialog {
+public class Dialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
 
-    public Subscribers() {
+    public Dialog() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -51,7 +51,7 @@ public class Subscribers extends JDialog {
     }
 
     public static void main(String[] args) {
-        Subscribers dialog = new Subscribers();
+        Dialog dialog = new Dialog();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
