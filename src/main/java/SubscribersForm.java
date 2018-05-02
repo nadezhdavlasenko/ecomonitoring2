@@ -74,7 +74,8 @@ public class SubscribersForm extends JFrame {
                             subscribersForm.textField1.setText(abonentTreeMap.entrySet()
                                     .stream()
                                     .filter(entry -> Objects.equals(entry.getValue(), abonent))
-                                    .map(Map.Entry::getKey));
+                                    .findFirst().orElseThrow(RuntimeException::new)
+                                    .getKey());
                         }
 
                     }
